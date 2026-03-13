@@ -1,4 +1,4 @@
-import { TransactionBlock } from "@mysten/sui/transactions"
+import { Transaction } from "@mysten/sui/transactions"
 
 /**
  * PTB (Programmable Transaction Block) Simulator for OneChain Development
@@ -358,8 +358,8 @@ export const PTB_PRESETS: PTBPreset[] = [
   },
 ]
 
-export function createTransactionFromSteps(steps: PTBStep[], params: Record<string, any>): TransactionBlock {
-  const tx = new TransactionBlock()
+export function createTransactionFromSteps(steps: PTBStep[], params: Record<string, any>): Transaction {
+  const tx = new Transaction()
   const variables: Record<string, any> = {}
 
   // Set the sender address - this is crucial for OneChain transactions
